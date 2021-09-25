@@ -1,0 +1,48 @@
+.cards {
+   padding-bottom: 40px;
+   &__inner {
+      ul {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+   &__item {
+      // background: center/110% no-repeat url(../../../images/src/Cards/meditationB.svg);
+      background-image: url(../../../images/src/Cards/meditationB.svg);
+      background-position: top;
+      // background-size: cover;
+      text-align: center;
+      width: 490px;
+      height: 605px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      position: relative;
+   }
+   img {
+      padding-top: 40px;
+      margin-bottom: 20px;
+   }
+   &__title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 47px;
+      color: black;
+      margin-bottom: 20px;
+   }
+   p {
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 60px;
+      color: black;
+      max-width: 324px;
+   }
+   button {
+      font-size: 24px;
+      line-height: 130%;
+      padding: 12px;
+      width: 210px;
+      margin-bottom: 30px;
+   }
+}

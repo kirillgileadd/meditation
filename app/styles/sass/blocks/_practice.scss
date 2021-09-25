@@ -1,0 +1,60 @@
+.practice {
+   background-image: url(../../../images/src/Practice/background.svg);
+   background-position: right;
+   background-repeat: no-repeat;
+   padding: 70px;
+   &__inner {
+  
+   }
+   &__title {
+      @extend .section__title-pos;
+      margin-bottom: 70px;
+      h3 {
+         max-width: 706px;
+         @extend .section__title; 
+      }
+      p {
+         max-width: 1105px;
+      }
+   }
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      ul {
+         li {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            list-style-type: none;
+            align-self: center;
+            width: 720px;
+            padding: 35px 40px;
+            margin-bottom: 5px;
+            h6 {
+               font-weight: 500;
+               font-size: 32px;
+               line-height: 47px;
+               color: black;
+               margin-bottom: 10px;
+            }
+            p {
+               margin-bottom: 5px;
+            }
+            button {
+               display: none;
+               align-self: flex-end;
+            }
+         }
+         li.active {
+            background-color: #fff;
+            border-radius: 20px;
+            button {
+               display: block;
+               outline: none;
+               background-color: inherit;
+               border: none;
+            }
+         }
+      }
+   }
+}

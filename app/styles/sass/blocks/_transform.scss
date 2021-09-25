@@ -1,0 +1,40 @@
+.transform {
+   padding: 67px 0;
+   background-image: url();
+   background-repeat: no-repeat;
+   background-position: left;
+   background-size: cover;
+   &__title {
+      @extend .section__title-pos;
+      h3 {
+         @extend .section__title;  
+         max-width: 578px;
+      }
+      p {
+         max-width: 1105px;
+         margin-bottom: 70px;
+      }
+   }
+   &__content {
+      display: flex;
+      ul {
+         li {
+            display: flex;
+            justify-content: space-between;
+            .info {
+               width: 620px;
+            }
+
+            &:last-child {
+               div {
+                  order: 1;
+               }
+               img {
+                  order: 2;
+               }
+            }
+         }
+      }
+   }
+}
+

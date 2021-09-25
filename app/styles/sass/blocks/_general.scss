@@ -1,0 +1,35 @@
+.main {
+   margin-top: 130px;
+}
+
+.button {
+   color: #fff;
+   border: none;
+   outline: none;
+   background-color: $mainColor;
+   text-align: center;
+   background: linear-gradient(180deg, #259385 0%, #159685 100%);
+   box-shadow: 0px 20px 40px rgba(21, 113, 101, 0.2);
+   border-radius: 50px;
+   &:active {
+      transform: translateY(1px);
+     }
+}
+
+
+.section__title {
+   text-align: center;
+   font-family: 'Merienda One', cursive;
+   font-size: 54px;
+   line-height: 130%;
+   color: #000;
+   margin-bottom: 22px;
+}
+
+.section__title-pos {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}

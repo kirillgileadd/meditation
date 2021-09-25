@@ -1,0 +1,164 @@
+// font-family: 'Heebo', sans-serif;
+// font-family: 'Merienda One', cursive;
+// USER VARIABLES SECTION
+
+$accent: #1A7F72; // Accent Color
+$fontsize: 24px; // Body Font Size
+$textcolor: rgb(0,0, 0, 0.5); // Text Color
+$lineheight: 31.1px; // Document Line Height
+$userfont: roboto-oh5, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$backColor:  rgba($color:#3BD1BB, $alpha: 0.09);
+$mainColor: #1A7F72;
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss';// Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import 'node_modules/swiper/swiper-bundle';	 // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+	}
+}
+	
+
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2');
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2');
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2');
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+
+// GENERAL DOCUMENT STYLES
+
+html{
+	box-sizing: border-box;
+ }
+ 
+ *,
+ *::after,
+ *::before{
+	box-sizing: inherit;
+ }
+ 
+ ul[class],
+ ol[class] {
+	padding: 0;
+ }
+ 
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ ul,
+ ol,
+ li,
+ figure,
+ figcaption,
+ blockquote,
+ dl,
+ dd {
+	margin: 0;
+ }
+ 
+ ul[class] {
+	list-style: none;
+ }
+ 
+ img {
+	max-width: 100%;
+	display: block;
+ }
+ 
+ input,
+ button,
+ textarea,
+ select {
+	font: inherit;
+ }
+ 
+ a{
+	text-decoration: none;
+ }
+ 
+
+::placeholder {
+	color: #666;
+}
+ 
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid {
+		border-color: red;
+	}
+	&:required:valid {
+		border-color: green;
+	}
+
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Heebo', sans-serif;;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	background-color: $backColor;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1680px;
+	padding: 0px 15px;
+}
+
+
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+
+.container-fluid {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 10px;
+}

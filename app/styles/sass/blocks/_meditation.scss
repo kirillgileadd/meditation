@@ -1,0 +1,48 @@
+.meditation {
+   background-image: url(../../../images/src/meditation/Background.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   margin-bottom: 53px;
+   &__inner {
+      padding: 200px 0;
+   }
+   &__title {
+      @extend .section__title-pos;
+      h3 {
+         @extend .section__title;  
+      }
+      p {
+         max-width: 1105px;
+         margin-bottom: 70px;
+      }
+   }
+   &__content {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 1fr;
+    grid-gap: 70px;
+    ul {
+       li {
+          min-height: 200px;
+          padding: 25px 35px;
+          margin-bottom: 100px;
+          h6 {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 47px;
+            color: black;
+            margin-bottom: 3px;
+          }
+       }
+    }
+    .list-first {
+       text-align: right;
+       li {
+          background-image: url(../../../images/src/meditation/RectangleR.svg);
+          background-repeat: no-repeat;
+          background-position:  left 5px top 5px;
+          background-size: 500px 200px;
+       }
+    }
+   }
+}

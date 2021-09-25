@@ -1,0 +1,47 @@
+.breath {
+   padding-top: 60px;
+   background-image: url(../../../images/src/Breath/background.svg);
+   background-repeat: no-repeat;
+   background-position: left;
+   background-size: cover;
+   &__title {
+      @extend .section__title-pos;
+      h3 {
+         @extend .section__title;  
+      }
+      p {
+         max-width: 1105px;
+      }
+   }
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+         li {
+            background-image: url(../../../images/src/Breath/rectangle.svg);
+            background-position: left -105px top -61px;
+            background-repeat: no-repeat;
+            background-size: 711px 282px;
+            padding: 30px 40px;
+            list-style-type: none;
+            align-self: center;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            width: 600px;
+            overflow: hidden;
+            h6 {
+               font-weight: 500;
+               font-size: 32px;
+               line-height: 47px;
+               color: black;
+               margin-bottom: 10px;
+            }
+            button {
+               width: 90px;
+            }
+         }
+      }
+   }
+}
