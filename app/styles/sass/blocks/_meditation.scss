@@ -1,3 +1,5 @@
+
+$needcolor: linear-gradient(270deg, #378377 0%, rgba(176, 234, 226, 0) 100%);
 .meditation {
    background-image: url(../../../images/src/meditation/Background.svg);
    background-repeat: no-repeat;
@@ -16,33 +18,88 @@
          max-width: 1105px;
          margin-bottom: 70px;
       }
+  
    }
    &__content {
     display: grid;
-    grid-template-columns: 1fr 0.7fr 1fr;
+    grid-template-columns: 1fr 0.6fr 1fr;
     grid-gap: 70px;
     ul {
        li {
+         // background: linear-gradient(270deg, #C3EEE8 26.37%, rgba(195, 226, 222, 0.75) 63.87%, rgba(231, 243, 242, 0.4) 103.6%);
+         // border: 3px solid ;
+         // border-color: linear-gradient(to right, blue, pink);
+         border-radius: 15px;
           min-height: 200px;
-          padding: 25px 35px;
+         //  padding: 25px 35px;
           margin-bottom: 100px;
           h6 {
+             z-index: 10;
             font-weight: 500;
             font-size: 32px;
             line-height: 47px;
             color: black;
             margin-bottom: 3px;
           }
+        
+       }
+    }
+    .list-second {
+      //  text-align: right;
+       li {
+         z-index: 10;
+         position: relative;
+          svg {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            right: 0;
+         }
        }
     }
     .list-first {
-       text-align: right;
-       li {
-          background-image: url(../../../images/src/meditation/RectangleR.svg);
-          background-repeat: no-repeat;
-          background-position:  left 5px top 5px;
-          background-size: 500px 200px;
+            text-align: right;
+      li {
+         z-index: 10;
+         position: relative;
+          svg {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            left: 0;
+         }
        }
     }
    }
 }
+
+.meditation__item-left {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(270deg, #378377 0%, rgba(176, 234, 226, 0) 100%);
+  padding: 3px;
+}
+
+.meditation__item-box-left {
+   min-height: 204px;
+   border-radius: 15px;
+   background: linear-gradient(270deg, #C3EEE8 26.37%, rgba(195, 226, 222, 0.75) 63.87%, rgba(231, 243, 242, 0.4) 103.6%);
+   padding: 2rem;
+}
+
+.meditation__item-right {
+   padding: 1rem;
+   position: relative;
+   background: linear-gradient(90deg, #378377  0%,
+   rgba(176, 234, 226, 0) 100%);
+   padding: 3px;
+ }
+ 
+ .meditation__item-box-right {
+    min-height: 204px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #C3EEE8 28.13%,
+    rgba(195, 226, 222, 0.75) 63.02%,
+    rgba(231, 243, 242, 0.4) 100%);
+    padding: 2rem;
+ }

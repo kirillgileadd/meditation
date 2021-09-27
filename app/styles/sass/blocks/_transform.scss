@@ -1,6 +1,6 @@
 .transform {
    padding: 67px 0;
-   background-image: url();
+   background-image: url(../../../images/src/transform/background.svg);
    background-repeat: no-repeat;
    background-position: left;
    background-size: cover;
@@ -18,11 +18,27 @@
    &__content {
       display: flex;
       ul {
+         margin: 0 auto;
+         width: 100%;
          li {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             .info {
                width: 620px;
+               h6 {
+                  font-size: 32px;
+                  line-height: 47px;
+                  color: black;
+                  margin-bottom: 15px;
+               }
+               p {
+                  margin-bottom: 30px;
+               }
+               button {
+                  padding: 15px;
+                  width: 210px;
+               }
             }
 
             &:last-child {

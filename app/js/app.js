@@ -21,6 +21,11 @@ const swiper = new Swiper('.swiper', {
 document.addEventListener('DOMContentLoaded', () => {
 
 	const practices = document.querySelectorAll('.practice__item')
+	const audioBtns = document.querySelectorAll('#startOrStop')
+	const audio = document.querySelector('#audio')
+	const playBtns = document.querySelectorAll('#btnPlay')
+	const pauseBtns = document.querySelectorAll('#btnPause')
+
 
 	for (let practice of practices) {
 		practice.addEventListener('click', () => {
@@ -33,5 +38,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		practices.forEach((practice) => {
 			practice.classList.remove('active')
 		})
+	}
+
+	for (let button of audioBtns) {
+		button.addEventListener('click', () => {
+			playBtns.forEach((playBtn) => {
+				playBtn.classList.remove('active')
+			})
+			if (audio.paused) {
+				pauseBtns.forEach((pauseBtn) => {
+					pauseBtn.classList.add('active')
+				})
+				audio.play()
+			} else {
+				pauseBtns.forEach((pauseBtn) => {
+					pauseBtn.classList.remove('active')
+				})
+				playBtns.forEach((playBtn) => {
+					playBtn.classList.add('active')
+				})
+				audio.pause()
+			}
+		})
+
 	}
 })

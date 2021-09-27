@@ -19,10 +19,12 @@
       align-items: center;
       ul {
          li {
-            background-image: url(../../../images/src/Breath/rectangle.svg);
-            background-position: left -105px top -61px;
-            background-repeat: no-repeat;
-            background-size: 711px 282px;
+            // background-image: url(../../../images/src/Breath/rectangle.svg);
+            // background-position: left -105px top -61px;
+            // background-repeat: no-repeat;
+            // background-size: 711px 282px;
+            box-shadow: -26px 4px 79px rgba(168, 207, 202, 0.39);
+            position: relative;
             padding: 30px 40px;
             list-style-type: none;
             align-self: center;
@@ -40,8 +42,25 @@
             }
             button {
                width: 90px;
+               img {
+                  margin: 0 auto;
+                  display: none;
+               }
+               audio {
+                  display: none;
+               }
+               img.active {
+                  display: block;
+               }
             }
          }
       }
+   }
+   &__item-bg {
+         position: absolute;
+         left: 0;
+         top: 3px;
+         z-index: -1;
+         box-shadow: -26px 4px 79px rgba(168, 207, 202, 0.39);
    }
 }
