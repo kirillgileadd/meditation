@@ -16,7 +16,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       padding: 50px;
+      padding-bottom: 80px;
       position: relative;
       &-bg {
          height: 650px;
@@ -25,7 +27,14 @@
          top: -20px;
          left: 0;
       }
+      &-box {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+  
+      }
    }
+
    img {
       padding-top: 40px;
       margin-bottom: 20px;
@@ -40,7 +49,7 @@
    p {
       font-size: 18px;
       line-height: 130%;
-      margin-bottom: 60px;
+      margin-bottom: 10px;
       color: black;
       max-width: 324px;
    }

@@ -44,13 +44,12 @@
                width: 90px;
                img {
                   margin: 0 auto;
-                  display: none;
                }
                audio {
                   display: none;
                }
-               img.active {
-                  display: block;
+               img {
+                  
                }
             }
          }
@@ -62,5 +61,18 @@
          top: 3px;
          z-index: -1;
          box-shadow: -26px 4px 79px rgba(168, 207, 202, 0.39);
+   }
+}
+
+.button--pause-img {
+   display: none;
+}
+
+.button--play.active {
+   .button--pause-img {
+      display: block;
+   }
+   .button--play-img {
+      display: none;
    }
 }
