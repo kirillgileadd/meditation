@@ -130,14 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			thankspopup.classList.add('active')
 			thankspopupBg.classList.add('active')
 			popupInput.value = ''
+			popupInput.style.border = ""
 		} else {
 			popupInput.style.border = "1px solid red"
 		}
 	})
 
-	function testFunc() {
-
-	}
 
 	document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
 		if (e.target === popupBg) { // Если цель клика - фот, то:
@@ -182,5 +180,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	// }
 	// 	})
 
-	// }
+	// }https://hachapuriivino.ru/
 })
