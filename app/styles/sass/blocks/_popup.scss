@@ -1,0 +1,139 @@
+.popup {
+   z-index: 200;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
+   transition: 0.5s all;
+   &__bg {
+      z-index: 199;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      opacity: 0; // Скрываем фон и сам попап
+      pointer-events: none; // Запрещаем ему быть целью событий
+      transition: 0.5s all;
+   }
+   &__container {
+      background-color: #ffff;
+      position: relative;
+	   margin: 15% auto;
+	   max-width: 800px;
+      border: 4px solid #1A7F72;
+      border-radius: 40px;
+	 
+   }
+   &__inner {
+      border-radius: 40px;
+      background-color: rgba($color: #3BD1BB, $alpha: 0.15);
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     position: relative;
+   }
+   &__title {
+      // @extend .section__title-pos;
+      @extend .section__title; 
+      margin-bottom: 35px;
+   }
+   &__input-body {
+      display: flex;
+      justify-content: center;
+   }
+   &__input {
+
+      border: none;
+      padding: 10px;
+      border-radius: 20px 0 0 20px;
+      width: 500px;
+      &::placeholder {
+         color: lightgray;
+      }
+   }
+   &__button-send {
+
+      border-radius: 0px 20px 20px 0px;
+      padding: 10px;
+   }
+   &__button-close {
+      padding: 15px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      img {
+         width: 32px;
+         height: 32px;
+      }
+   }
+}
+
+.popup__bg.active { // При добавлении класса 'active'
+   opacity: 1; // Показываем фон и попап
+   pointer-events: all; // Возвращаем события
+   transition: 0.5s all;
+}
+
+.popup.active { // При добавлении класса 'active'
+   transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
+   transition: 0.5s all;
+}
+
+.thankspopup {
+   &__container {
+      background-color: #ffff;
+      position: relative;
+	   margin: 15% auto;
+	   max-width: 800px;
+      border: 4px solid #1A7F72;
+      border-radius: 40px;
+   }
+   &__inner {
+      border-radius: 40px;
+      background-color: rgba($color: #3BD1BB, $alpha: 0.15);
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     position: relative;
+   }
+   &__title {
+      @extend .section__title; 
+      margin-bottom: 35px;
+   }
+   &__button-close {
+      padding: 15px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      img {
+         width: 32px;
+         height: 32px;
+      }
+   }
+   &__text {
+      color: black;
+   }
+}
+
+.thankspopup.active { // При добавлении класса 'active'
+   transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
+   transition: 0.5s all;
+}
+
+.thankspopup__bg.active { // При добавлении класса 'active'
+   opacity: 1; // Показываем фон и попап
+   pointer-events: all; // Возвращаем события
+   transition: 0.5s all;
+}

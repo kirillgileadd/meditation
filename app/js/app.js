@@ -90,6 +90,72 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+
+	//POPUP
+
+
+	let popupBg = document.querySelector('.popup__bg');
+	let popup = document.querySelector('.popup');
+	let openPopupButtons = document.querySelectorAll('#popupBtn')
+	let closePopupButton = document.querySelector('#popupBtnClose')
+	let thankspopup = document.querySelector('.thankspopup')
+	let thankspopupBg = document.querySelector('.thankspopup__bg')
+	let sendEmailBtn = document.querySelector('.popup__button-send')
+	let thankspopupBtnClose = document.querySelector('#thankspopupBtnClose')
+
+	const popupClose = () => {
+		popupBg.classList.remove('active'); // Убираем активный класс с фона
+		popup.classList.remove('active'); // И с окна
+	}
+	const popupOpen = () => {
+		popupBg.classList.add('active'); // Убираем активный класс с фона
+		popup.classList.add('active'); // И с окна
+	}
+
+	openPopupButtons.forEach((button) => { // Перебираем все кнопки
+		button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+			e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+			popupOpen()
+		})
+	});
+
+	closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
+		popupClose()
+	});
+
+	sendEmailBtn.addEventListener('click', () => {
+		let popupInput = document.querySelector('#sendBtn')
+		if (popupInput.value !== '') {
+			popupClose()
+			thankspopup.classList.add('active')
+			thankspopupBg.classList.add('active')
+			popupInput.value = ''
+		} else {
+			popupInput.style.border = "1px solid red"
+		}
+	})
+
+	function testFunc() {
+
+	}
+
+	document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+		if (e.target === popupBg) { // Если цель клика - фот, то:
+			popupClose()
+		} else if (e.target === thankspopupBg) {
+			thankspopup.classList.remove('active')
+			thankspopupBg.classList.remove('active')
+		}
+	});
+
+	thankspopupBtnClose.addEventListener('click', () => {
+		thankspopup.classList.remove('active')
+		thankspopupBg.classList.remove('active')
+	})
+
+
+
+
 	// if (audio.paused) {
 	// 	audio.play()
 	// } else {

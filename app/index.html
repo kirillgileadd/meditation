@@ -12,7 +12,7 @@
             Meditation can wipe away the day's stress, bringing with it inner peace. See how you can easily learn to
             practice meditation whenever you need it most.
          </p>
-         <button class="button getstart__button">Get Start </button>
+         <button class="button getstart__button" id="popupBtn">Get Start </button>
          <img class="getstart__img" src="./images/src/MainTop/woman.svg" alt="">
       </section>
       <!-- section getstart -->
@@ -33,7 +33,7 @@
                            tasks
                            in daily life. </p>
                      </div>
-                     <button class="button">Learn More</button>
+                     <button class="button" id="popupBtn">Learn More</button>
                   </li>
                   <li class="cards__item">
                      <div class="cards__item-box">
@@ -43,7 +43,7 @@
                         <p> Yoga offers physical and mental health benefits for people of all ages. And, if you’re going
                            through an illness, recovering from surgery or living with a chronic condition.</p>
                      </div>
-                     <button class="button">Learn More</button>
+                     <button class="button" id="popupBtn">Learn More</button>
                   </li>
                   <li class="cards__item">
                      <div class="cards__item-box">
@@ -53,7 +53,7 @@
                         <p>Music is an incredibly therapeutic tool for emotional health, daily performance, and sleep.
                         </p>
                      </div>
-                     <button class="button">Learn More</button>
+                     <button class="button" id="popupBtn">Learn More</button>
                   </li>
                </ul>
             </div>
@@ -310,7 +310,7 @@
                               These cases are perfectly simple and easy to distinguish. In a free hour when our power of
                               choice is untrammelled.
                            </p>
-                           <button class="button">
+                           <button class="button" id="popupBtn">
                               Learn More
                            </button>
                         </div>
@@ -325,7 +325,7 @@
                               The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
                               non-characteristic words etc.
                            </p>
-                           <button class="button">
+                           <button class="button" id="popupBtn">
                               Learn More
                            </button>
                         </div>
@@ -336,6 +336,48 @@
          </div>
       </section>
       <!-- section Transform -->
+
+      <!-- popup -->
+      <div class="popup__bg">
+         <div class="popup">
+            <div class="popup__container">
+               <div class="popup__inner">
+                  <h3 class="popup__title">
+                     Enter your email address
+                  </h3>
+                  <div class="popup__input-body">
+                     <input class="popup__input" placeholder="email" id="sendBtn" type="text" value>
+                     <button class="popup__button-send button">Send</button>
+                  </div>
+                  <button class="popup__button-close" id="popupBtnClose">
+                     <img src="./images/src/popup/close.svg" alt="">
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- popup -->
+
+      <!-- popupThanks -->
+      <div class="thankspopup__bg popup__bg">
+         <div class="thankspopup popup">
+            <div class="thankspopup__container">
+               <div class="thankspopup__inner">
+                  <h3 class="thankspopup__title">
+                     Thank You!
+                  </h3>
+                  <p class="thankspopup__text">
+                     Your email address has been sent
+                  </p>
+                  <button class="thankspopup__button-close" id="thankspopupBtnClose">
+                     <img src="./images/src/popup/close.svg" alt="">
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- popupThanks -->
+
    </div>
 </div>
 
