@@ -79,6 +79,10 @@ html{
  ul[class] {
 	list-style: none;
  }
+
+ ul {
+	 padding: 0;
+ }
  
  img {
 	max-width: 100%;
@@ -132,6 +136,9 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	background-color: $backColor;
+	&.lock {
+		overflow: hidden;
+	}
 }
 
 .container {

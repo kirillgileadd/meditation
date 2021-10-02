@@ -1,5 +1,5 @@
 .getstart {
-   margin-bottom: 100px;
+   margin-bottom: 10px;
    height: 1200px;
    background-image: url(../../../images/src/MainTop/BGvector.svg);
    background-position: center;
@@ -31,4 +31,68 @@
      font-weight: bold;
      padding: 19px;
   }
+}
+
+@media(max-width: 1024px) {
+   .getstart {
+      p {
+         margin-bottom: 30px;
+         max-width: 700px;
+      }
+      &__title {
+         max-width: 758px;
+         font-family: 'Merienda One', cursive;
+         font-size: 60px;
+         line-height: 130%;
+         color: #fff;
+         margin-bottom: 22px;
+        }
+   }
+}
+
+@media(max-width: 767px) {
+   .getstart {
+      justify-content: flex-start;
+      p {
+         font-size: 20px;
+         line-height: 110%;
+         margin-bottom: 30px;
+         max-width: 400px;
+      }
+      &__title {
+         max-width: 758px;
+         font-family: 'Merienda One', cursive;
+         font-size: 50px;
+         line-height: 130%;
+         color: #fff;
+         margin-bottom: 22px;
+        }
+   }
+}
+
+@media(max-width: 576px) {
+   .getstart {
+      p {
+         font-size: 20px;
+         line-height: 110%;
+         margin-bottom: 30px;
+         max-width: 400px;
+      }
+      &__title {
+         max-width: 440px;
+         font-family: 'Merienda One', cursive;
+         font-size: 50px;
+         line-height: 130%;
+         color: #fff;
+         margin-bottom: 22px;
+      }
+      &__button {
+         width: 200px;
+         margin-bottom: 70px;
+         font-size: 30px;
+         line-height: 130%;
+         font-weight: bold;
+         padding: 19px;
+      }
+   }
 }

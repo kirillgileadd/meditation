@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const playBtns = document.querySelectorAll('#btnPlay')
 	const pauseBtns = document.querySelectorAll('#btnPause')
 	const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
-
+	const menuBody = document.querySelector('.menu__body')
 	//Scroll to section 
 
 
@@ -43,6 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				menuLink.c
 				const goToBlock = document.querySelector(menuLink.dataset.goto)
 				const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight
+
+				if (iconMenu.classList.contains('active')) {
+					document.body.classList.remove('lock')
+					iconMenu.classList.remove('active')
+					menuBody.classList.remove('active')
+				}
 
 				window.scrollTo({
 					top: goToBlockValue,
@@ -102,10 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	let thankspopupBg = document.querySelector('.thankspopup__bg')
 	let sendEmailBtn = document.querySelector('.popup__button-send')
 	let thankspopupBtnClose = document.querySelector('#thankspopupBtnClose')
+	let popupInput = document.querySelector('#sendBtn')
+
 
 	const popupClose = () => {
 		popupBg.classList.remove('active'); // Убираем активный класс с фона
 		popup.classList.remove('active'); // И с окна
+		popupInput.style.border = ""
+
 	}
 	const popupOpen = () => {
 		popupBg.classList.add('active'); // Убираем активный класс с фона
@@ -121,16 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
 		popupClose()
+
 	});
 
 	sendEmailBtn.addEventListener('click', () => {
-		let popupInput = document.querySelector('#sendBtn')
+
 		if (popupInput.value !== '') {
 			popupClose()
 			thankspopup.classList.add('active')
 			thankspopupBg.classList.add('active')
 			popupInput.value = ''
-			popupInput.style.border = ""
 		} else {
 			popupInput.style.border = "1px solid red"
 		}
@@ -151,7 +161,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		thankspopupBg.classList.remove('active')
 	})
 
+	// Butger 
 
+	const iconMenu = document.querySelector('.menu__icon')
+	if (iconMenu) {
+		iconMenu.addEventListener('click', () => {
+			document.body.classList.toggle('lock')
+			iconMenu.classList.toggle('active')
+			menuBody.classList.toggle('active')
+		})
+	}
 
 
 	// if (audio.paused) {

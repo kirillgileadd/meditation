@@ -1,5 +1,5 @@
 .footer {
-   height: 425px;
+   height: 450px;
    background-image: url(../../../images/src/Footer/background.png);
    background-position: top;
    background-size: cover;
@@ -47,3 +47,31 @@
    }
 }
 
+
+@media(max-width: 1024px) {
+   .footer {
+      ul {
+         padding: 0;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         text-align: center;
+         li {
+            &::after {
+               display: none;
+            }
+         }
+      }
+   }
+}
+
+@media(max-width: 576px) {
+   .footer {
+      ul {
+         li {
+            a {
+               font-size: 22px;
+            }
+         }
+      }
+   }
+}

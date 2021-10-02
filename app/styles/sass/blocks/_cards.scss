@@ -61,3 +61,24 @@
       margin-bottom: 30px;
    }
 }
+
+@media(max-width: 1024px) {
+   .cards {
+      ul {
+         padding: 0;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+   }
+}
+
+@media(max-width: 412px) {
+   .cards {
+      &__item {
+         height: 705;
+      }
+      p {
+         margin-bottom: 20px;
+      }
+   }
+}

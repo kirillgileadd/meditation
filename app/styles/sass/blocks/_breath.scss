@@ -19,10 +19,6 @@
       align-items: center;
       ul {
          li {
-            // background-image: url(../../../images/src/Breath/rectangle.svg);
-            // background-position: left -105px top -61px;
-            // background-repeat: no-repeat;
-            // background-size: 711px 282px;
             box-shadow: -26px 4px 79px rgba(168, 207, 202, 0.39);
             position: relative;
             padding: 30px 40px;
@@ -71,5 +67,36 @@
    }
    .button--play-img {
       display: none;
+   }
+}
+
+@media(max-width: 1380px) {
+   .breath {
+      padding-top: 50px;
+      &__title {
+         margin-bottom: 50px;
+      }
+      &__img {
+         position: absolute;
+         top: -150px;
+         left: 20%;
+         opacity: 0.3;
+      }
+      &__content {
+         justify-content: center;
+         position: relative;
+         ul {
+            z-index: 10;
+         }
+      }
+   }
+}
+@media(max-width: 767px) {
+   .breath {
+      &__title {
+         h3 {
+            font-size: 46px;
+         }
+      }
    }
 }
