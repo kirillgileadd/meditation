@@ -103,3 +103,180 @@ $needcolor: linear-gradient(270deg, #378377 0%, rgba(176, 234, 226, 0) 100%);
     rgba(231, 243, 242, 0.4) 100%);
     padding: 2rem;
  }
+
+
+ @media(max-width: 1528px) {
+   .meditation {
+      &__content {
+         position: relative;
+         grid-template-columns: 1fr 1fr;
+         img {
+            position: absolute;
+            left: 35%;
+            top: 10%;
+            opacity: 0.3;
+         }
+         ul {
+            li {
+               flex: 1;
+            }
+         }
+      }
+   }
+}
+
+@media(max-width: 1200px) {
+   .meditation {
+      &__content {
+         position: relative;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 40px;
+         img {
+            position: absolute;
+            left: 25%;
+            top: 10%;
+            opacity: 0.3;
+         }
+         ul {
+            li {
+               margin-bottom: 50px;
+            }
+         }
+      }
+      &__item-right, &__item-left {
+         margin-bottom: 0;
+         height: 250px;
+      }
+      &__item-box-right, &__item-box-left {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         height: 100%;
+      }
+   }
+}
+
+@media(max-width: 1024px) {
+   .meditation {
+      &__content {
+         position: relative;
+         grid-template-columns: 1fr 1fr;
+         img {
+            position: absolute;
+            left: 35%;
+            top: 10%;
+            opacity: 0.3;
+         }
+         ul {
+            li {
+               margin-bottom: 40px;
+            }
+         }
+      }
+      &__item-right, &__item-left {
+         margin-bottom: 0;
+         height: 350px;
+      }
+      &__item-box-right, &__item-box-left {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+      }
+   }
+}
+
+@media(max-width: 767px) {
+   .meditation {
+      &__inner {
+         padding: 80px 0;
+      }
+      &__title {
+         h3 {
+            font-size: 40px;
+         }
+         p {
+            font-size: 20px;
+         }
+      }
+   }
+}
+
+@media(max-width: 667px) {
+   .meditation {
+      &__content {
+         position: relative;
+         grid-template-columns: 1fr;
+         grid-gap: 10px;
+         img {
+            position: absolute;
+            left: 35%;
+            top: 10%;
+            opacity: 0.3;
+         }
+         ul {
+            li {
+               margin-bottom: 20px;
+            }
+         }
+      }
+      &__item-right, &__item-left {
+         margin-bottom: 0;
+         height: 250px;
+      }
+      &__item-left {
+         text-align: left;
+         padding: 1rem;
+         position: relative;
+          background: linear-gradient(90deg, #378377  0%,
+         rgba(176, 234, 226, 0) 100%);
+         padding: 3px;
+      }
+      &__item-box-left {
+         min-height: 204px;
+         border-radius: 15px;
+         background: linear-gradient(90deg, #C3EEE8 28.13%,
+         rgba(195, 226, 222, 0.75) 63.02%,
+         rgba(231, 243, 242, 0.4) 100%);
+         padding: 2rem;
+      }
+      &__item-box-right, &__item-box-left {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+      }
+   }
+}
+
+@media(max-width: 667px) {
+   .meditation {
+      &__content {
+         ul {
+            li {
+               h6 {
+                  z-index: 10;
+                 font-weight: 500;
+                 font-size: 26px;
+                 line-height: 47px;
+                 color: black;
+                 margin-bottom: 3px;
+               }
+               p {
+                  font-size: 20px;
+               }
+            }
+         }
+      }    
+   }
+}
+
+@media(max-width: 380px) {
+   .meditation {
+      &__content {
+
+      }
+      &__item-right, &__item-left {
+         margin-bottom: 0;
+         height: 280px;
+      }
+   }
+}
