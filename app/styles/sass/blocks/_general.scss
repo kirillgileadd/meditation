@@ -9,12 +9,18 @@
    background-color: $mainColor;
    text-align: center;
    font-weight: 500;
-   background: linear-gradient(180deg, #259385 0%, #159685 100%);
+   background-color: linear-gradient(180deg, #259385 0%, #159685 100%);
+   border: $mainColor 1px solid;
    box-shadow: 0px 20px 40px rgba(21, 113, 101, 0.2);
    border-radius: 50px;
    &:active {
       transform: translateY(1px);
-     }
+   }
+   &:hover {
+      color: #000;
+     background-color: #3BD1BB;
+      border: $mainColor 1px solid;
+   }
 }
 
 
@@ -33,4 +39,10 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+}
+
+@media (max-width: 768px) {
+   .main {
+      margin-top: 80px;
+   }
 }

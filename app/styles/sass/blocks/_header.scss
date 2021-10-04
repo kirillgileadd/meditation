@@ -112,7 +112,10 @@
 }
 @media (max-width: 768px) {
    .header {
-     
+     height: 80px;
+     &__inner {
+      height: 80px;
+     }
    }
 
    .menu {
@@ -178,7 +181,7 @@
             width: 100%;
             top: 0;
             left: 0;
-            height: 130px;
+            height: 80px;
             z-index: 22;
              background-color: #fff;
          }
@@ -186,8 +189,8 @@
             content: '';
             z-index: 23;
             position: fixed;
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             background-image: url(../../../images/src/Logo.svg);
             background-repeat: no-repeat;
             background-position: left;

@@ -20,7 +20,6 @@
    &__container {
       background-color: #ffff;
       position: relative;
-	   margin: 15% auto;
 	   max-width: 800px;
       border: 4px solid #1A7F72;
       border-radius: 40px;
@@ -90,7 +89,6 @@
    &__container {
       background-color: #ffff;
       position: relative;
-	   margin: 15% auto;
 	   max-width: 800px;
       border: 4px solid #1A7F72;
       border-radius: 40px;
@@ -136,4 +134,56 @@
    opacity: 1; // Показываем фон и попап
    pointer-events: all; // Возвращаем события
    transition: 0.5s all;
+}
+
+
+@media (max-width: 720px) {
+   .popup {
+      overflow: auto;
+      width: 100vw;
+      height: 100vh;
+      &__title {
+         font-size: 32px;
+      }
+      &__container {
+         border: none;
+         border-radius: 0px;
+         width: 100%;
+         height: 100%;
+      }
+      &__inner {
+         overflow: auto;
+         width: 100%;
+         height: 100%;
+      }
+      &__input {
+         width: 300px;
+      }
+   }
+   .thankspopup {
+      width: 100vw;
+      height: 100vh;
+      &__container {
+         border: none;
+         border-radius: 0px;
+         width: 100%;
+         height: 100%;
+      }
+      &__inner {
+        
+         width: 100%;
+         height: 100%;
+      }
+      &__input {
+         width: 300px;
+      }
+   }
+}
+
+@media (max-width: 420px) {
+   .popup {
+      &__input {
+         width: 200px;
+      }
+   }
 }

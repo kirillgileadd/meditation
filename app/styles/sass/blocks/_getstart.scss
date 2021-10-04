@@ -1,6 +1,6 @@
 .getstart {
    margin-bottom: 10px;
-   height: 1200px;
+   padding-bottom: 70px;
    background-image: url(../../../images/src/MainTop/BGvector.svg);
    background-position: center;
    background-repeat: no-repeat;
@@ -52,6 +52,7 @@
 
 @media(max-width: 767px) {
    .getstart {
+      padding-bottom: 20px;
       justify-content: flex-start;
       p {
          font-size: 20px;
