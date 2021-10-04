@@ -81,21 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//Music
 
+
+
 	if (audioBtns.length > 0) {
 		audioBtns.forEach((audioBtn) => {
-			audioBtn.addEventListener('click', () => {
-				audioBtn.classList.toggle('active')
-				audioWork()
+			audioBtn.addEventListener('click', (e) => {
+
+				if (audioBtn.classList.contains('active')) {
+					removePlayClases()
+				} else {
+					removePlayClases()
+					audioBtn.classList.toggle('active')
+				}
 			})
 		})
 	}
 
-	function audioWork() {
-		if (audios.length > 0) {
-			audios.forEach((audio) => { })
-		}
+	const removePlayClases = () => {
+		audioBtns.forEach((audioBtn) => {
+			audioBtn.classList.remove('active')
+		})
 	}
-
 
 	//POPUP
 
